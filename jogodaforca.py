@@ -6,17 +6,46 @@ class JogoDaForca(object):
 
 	"""
 
+	#https://tempolivre.umcomo.com.br/artigo/palavras-para-forca-29337.html
+	adivinhe=[
+		["Manchester","Time de Futebol"],
+		["Amarelo","Cor Primaria"],
+		["Amiga","Pessoa Proxima"],
+		["Amor","Sentimento"],
+		["Bolo","Comida"],
+		["Cama","Móvel"],
+		["Caneca","Utensilio"],
+		["Celular","Utensilio"],
+		["Clube","Local Social"],
+		["Doce","Sobremesa"],
+		["Elefante","Animal"],
+		["Escola","Lugar"],
+		["Estojo","Objeto"],
+		["Faca","Objeto"],
+		["Girafa","Animal"],
+		["Limonada","Bebida"],
+		["Meia","Roupa"],
+		["Parque","Lugar"],
+		["Passarinho","Animal"],
+		["Peixe","Animal"],
+		["Pijama","Roupa"],
+		["Rato","Animal"],
+		["Umbigo","Corpo Humano"]
+	]
 
 	"""
 	atributos
 	"""
-	__secretWord = "Manchester"
+	import random
+	selecionada=random.choice(adivinhe)
+
+	__secretWord = selecionada[0]
 	__maxErrors = 5
 	__errors = 0
 	__correctLetters = []
 	__correctLettersNumber = 0
 	__letterTyped = []
-	__description = "Um clube de futebool europeu campeão da UEFA Champions League"
+	__description = selecionada[1]
 
 
 	def __init__(self, secretWord, maxErrors, description):
